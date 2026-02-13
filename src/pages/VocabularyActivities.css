@@ -1,0 +1,76 @@
+.vocabulary-container {
+  min-height: 100vh;
+  padding: 2rem;
+  color: var(--text-primary);
+  width: 100%;
+  background: var(--bg-dark);
+}
+
+.header-section {
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+.header-section h1 {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.activity-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+  background: var(--bg-input);
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.activity-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.activity-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.activity-card p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .header-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+} 

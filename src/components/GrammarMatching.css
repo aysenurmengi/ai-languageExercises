@@ -1,0 +1,13 @@
+.grammar-matching-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem;
+  padding: 2.5rem;
+  background: #16213e;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid #1e2d4d;
+  color: #e2e2e2;
+  text-align: center;
+} 

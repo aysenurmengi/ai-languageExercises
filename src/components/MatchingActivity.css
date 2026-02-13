@@ -1,0 +1,160 @@
+.matching-activity-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  color: var(--text-primary);
+}
+
+.matching-pairs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.matching-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.matching-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.matching-card:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+}
+
+.matching-card.selected {
+  background: var(--accent);
+  color: var(--text-primary);
+}
+
+.matching-card.matched {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+  opacity: 0.7;
+}
+
+.check-matches-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: var(--accent);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.check-matches-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.matching-area {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin: 2rem 0;
+}
+
+.left-items,
+.right-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.item-btn {
+  background: #233554;
+  border: 1px solid #1e2d4d;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #e2e2e2;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.item-btn:hover:not(:disabled) {
+  background: #2a4365;
+  transform: translateY(-2px);
+}
+
+.item-btn.selected {
+  border-color: #4fd1c5;
+  background: #2a4365;
+  box-shadow: 0 0 0 2px rgba(79, 209, 197, 0.3);
+}
+
+.item-btn.matched {
+  opacity: 0.8;
+  background: #2d4a7c;
+  border-color: #4fd1c5;
+  cursor: not-allowed;
+}
+
+.item-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.item-btn.correct {
+  background-color: rgba(72, 187, 120, 0.2);
+  border-color: #48bb78;
+}
+
+.item-btn.incorrect {
+  background-color: rgba(245, 101, 101, 0.2);
+  border-color: #f56565;
+}
+
+/* Eşleştirilmiş çiftler için yeni stil */
+.item-btn.paired {
+  background: #2d4a7c;
+  border-color: #4fd1c5;
+  position: relative;
+}
+
+.item-btn.paired::after {
+  content: '✓';
+  position: absolute;
+  right: 10px;
+  color: #4fd1c5;
+}
+
+.answers-list {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #1a1a2e;
+  border-radius: 8px;
+  border: 1px solid #1e2d4d;
+}
+
+.answers-list h3 {
+  color: #4fd1c5;
+  margin-bottom: 1rem;
+}
+
+.answer-pair {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  color: #e2e2e2;
+}
+
+/* ... diğer stiller aynı ... */ 

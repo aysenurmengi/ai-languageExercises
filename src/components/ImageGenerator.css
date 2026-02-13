@@ -1,0 +1,307 @@
+.image-generator-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: calc(100vh - 4rem);
+  background: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+/* Sol Sütun */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 500px;
+}
+
+/* Form Container - Başlangıçta ortalanmış */
+.form-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* Exercise oluşturulduktan sonra form'un pozisyonu */
+.left-column .form-container {
+  margin: 0;
+}
+
+/* Sağ sütun sadece exercise varken görünür */
+.right-column {
+  flex: 1;
+  max-width: 800px;
+  display: none;
+}
+
+.right-column:has(> *) {
+  display: block;
+}
+
+.form-container h2 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: #4fd1c5;
+}
+
+.form-group select option {
+  background: #1a1a2e;
+  color: #e2e2e2;
+  padding: 0.5rem;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generate-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.generate-btn:disabled {
+  background: var(--border);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.generated-image-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.generated-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Soru bölümü stilleri */
+.questions-section {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border);
+}
+
+.questions-section h2 {
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.question {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--bg-input);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.question-text {
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.option-btn {
+  padding: 0.8rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+  background: var(--bg-input);
+  border-color: var(--primary);
+}
+
+.option-btn.selected {
+  background: var(--primary);
+  color: var(--text-primary);
+}
+
+.option-btn.correct {
+  background: var(--success);
+  border-color: var(--success);
+}
+
+.option-btn.incorrect {
+  background: var(--error);
+  border-color: var(--error);
+}
+
+.check-answers-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.check-answers-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.results {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.results h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.perfect-score {
+  color: var(--success);
+  margin-top: 0.5rem;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+  .image-generator-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-column,
+  .right-column {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Responsive durumda da form ortalı kalır */
+  .form-container {
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .image-generator-container {
+    padding: 1rem;
+  }
+}
+
+.form-section {
+  flex: 1;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.form-section h2 {
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+}
+
+.results-section {
+  flex: 2;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.image-item {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+}
+
+.error-message {
+  color: var(--error);
+  background: rgba(239, 68, 68, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+} 

@@ -1,0 +1,133 @@
+.multiple-choice-container {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  color: var(--text-primary);
+}
+
+.exercise-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.exercise-header h1 {
+  color: #4fd1c5;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.question-item {
+  background: #1a1a2e;
+  border: 1px solid #1e2d4d;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.question-number {
+  color: #4fd1c5;
+  font-weight: 600;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.option-button {
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.option-button:hover {
+  background: var(--bg-hover);
+  border-color: var(--accent);
+}
+
+.option-button.selected {
+  background: var(--accent);
+  color: var(--text-primary);
+}
+
+.option-btn.correct {
+  background-color: rgba(72, 187, 120, 0.2);
+  border-color: #48bb78;
+}
+
+.option-btn.incorrect {
+  background-color: rgba(245, 101, 101, 0.2);
+  border-color: #f56565;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: var(--accent);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.results {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  background: #1a1a2e;
+  border-radius: 8px;
+  border: 1px solid #1e2d4d;
+}
+
+.results h2 {
+  color: #4fd1c5;
+  margin-bottom: 1rem;
+}
+
+.perfect-score {
+  color: #48bb78;
+}
+
+.perfect-message {
+  color: #48bb78;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .multiple-choice-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+} 

@@ -1,0 +1,167 @@
+/* Root seviyesinde overflow kontrolü */
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #16213e;
+}
+
+.home-container {
+  background: var(--bg-dark);
+  min-height: 100vh;
+  padding: 2rem;
+  color: var(--text-primary);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  opacity: 0.9;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem; /* Kartlar arası boşluğu artır */
+  max-width: 1100px; /* Grid genişliğini artır */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.feature-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--text-primary);
+  min-height: 250px; /* Minimum yükseklik ekle */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.feature-icon {
+  font-size: 3rem; /* İkon boyutunu artır */
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.8rem; /* Başlık boyutunu artır */
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  opacity: 0.8;
+  font-size: 1.1rem; /* Metin boyutunu artır */
+  line-height: 1.5;
+}
+
+.coming-soon {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.coming-soon::after {
+  content: "Coming Soon";
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #4fd1c5;
+  color: #16213e;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.info-card {
+  background: #1a1a2e;
+  border: 1px solid #1e2d4d;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.info-card h3 {
+  color: #4fd1c5;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.info-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-card li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.info-card li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #4fd1c5;
+}
+
+/* Mobil cihazlar için responsive tasarım */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .feature-card {
+    padding: 2rem;
+    min-height: 200px;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+} 

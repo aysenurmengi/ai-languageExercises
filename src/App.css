@@ -1,0 +1,72 @@
+/* Root seviyesinde overflow kontrolü */
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #16213e; /* Arka plan rengini root'a taşıyalım */
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0; /* Padding'i kaldıralım */
+  color: #e2e2e2;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.App-header {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.App-title {
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  min-height: 100vh; /* calc yerine direkt 100vh */
+  width: 100%;
+}
+
+.loading {
+  color: #4fd1c5; /* Soft turkuaz yükleme metni */
+  background: #16213e;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.error {
+  color: #ff6b6b;
+  background: #16213e;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+} 

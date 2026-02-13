@@ -1,0 +1,144 @@
+.cloze-test-form {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  background: #16213e;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  margin: 2rem;
+  border: 1px solid #1e2d4d;
+}
+
+.cloze-test-form h2 {
+  color: #4fd1c5;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #e2e2e2;
+  font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background: #1a1a2e;
+  border: 1px solid #1e2d4d;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #e2e2e2;
+  transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4fd1c5;
+  box-shadow: 0 0 0 2px rgba(79, 209, 197, 0.2);
+}
+
+.checkbox-single {
+  margin-top: 1rem;
+}
+
+.checkbox-single label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.checkbox-single input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #4fd1c5;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #4fd1c5;
+  color: #16213e;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.generate-btn:hover:not(:disabled) {
+  background: #38b2ac;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(79, 209, 197, 0.2);
+}
+
+.generate-btn:disabled {
+  background: #2a4365;
+  color: #718096;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .cloze-test-form {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
+
+.usage-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: #1a1a2e;
+  border-radius: 8px;
+  border: 1px solid #1e2d4d;
+}
+
+.usage-option {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #e2e2e2;
+  font-weight: normal;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.usage-option:hover {
+  background: #233554;
+}
+
+.usage-option input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #4fd1c5;
+}
+
+/* Seçili durum için stil */
+.usage-option.selected {
+  background: #2d4a7c;
+  border-color: #4fd1c5;
+} 

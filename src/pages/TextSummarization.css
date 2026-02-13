@@ -1,0 +1,252 @@
+.text-summarization-container {
+  min-height: 100vh;
+  padding: 2rem;
+  color: var(--text-primary);
+  width: 100%;
+  background: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+}
+
+.summarization-content {
+  max-width: 800px;
+  width: 100%;
+}
+
+.text-summarization-container h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.file-upload-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.file-input-label {
+  position: relative;
+  display: inline-block;
+}
+
+.file-input {
+  position: absolute;
+  left: -9999px;
+}
+
+.upload-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.upload-button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.file-name {
+  margin-top: 1rem;
+  color: var(--primary);
+}
+
+.text-preview, .summary-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.text-preview h3, .summary-section h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.text-content, .summary-content {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.summarize-btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.summarize-btn:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.summarize-btn:disabled {
+  background: var(--border);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Scrollbar stilleri */
+.text-content::-webkit-scrollbar,
+.summary-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-content::-webkit-scrollbar-track,
+.summary-content::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+.text-content::-webkit-scrollbar-thumb,
+.summary-content::-webkit-scrollbar-thumb {
+  background: #4fd1c5;
+  border-radius: 4px;
+}
+
+.summary-options {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #1a1a2e;
+  border-radius: 8px;
+  border: 1px solid #1e2d4d;
+}
+
+.option-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.option-group label {
+  color: var(--text-primary);
+}
+
+.option-group select {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.option-group select:hover {
+  border-color: var(--primary);
+}
+
+.tab-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.tab-btn {
+  padding: 1rem 2rem;
+  background: #233554;
+  border: 1px solid #1e2d4d;
+  border-radius: 8px;
+  color: #e2e2e2;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: #2d4a7c;
+}
+
+.tab-btn.active {
+  background: #4fd1c5;
+  color: #16213e;
+  border-color: #4fd1c5;
+}
+
+.summarize-section {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  z-index: 1;
+  min-height: 200px;
+}
+
+/* Loading spinner için container */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Loading spinner'ı düzenleyelim */
+.loading-spinner {
+  margin-bottom: 1rem;
+}
+
+/* Loading text için stil */
+.loading-text {
+  color: var(--text-primary);
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Results section'ı düzenleyelim */
+.results-section {
+  margin-top: 3rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* Loading durumunda arka planı karartmak için overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Options container'ı düzenleyelim */
+.options-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+} 
